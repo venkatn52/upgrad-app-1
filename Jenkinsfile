@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                echo 'Deploying'
+                sh "docker build . -t upgrad-app\${BUILD_NUMBER}"
             }
         }
      }
